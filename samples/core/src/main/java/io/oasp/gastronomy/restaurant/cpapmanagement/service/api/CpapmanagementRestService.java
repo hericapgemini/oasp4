@@ -21,7 +21,7 @@ import io.oasp.gastronomy.restaurant.staffmanagement.logic.api.to.StaffMemberEto
  *
  */
 
-@Path("/cpapmanagement/v1")
+@Path("/cpapmanagement/v1/user")
 @Named("CpapmanagementRestService")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
@@ -33,7 +33,7 @@ public interface CpapmanagementRestService extends RestService {
    * @param userId specified for the user
    * @return the user
    */
-  @Path("/user/{userId}/")
+  @Path("{userId}/")
   @GET
   UserEto findUser(@PathParam("userId") long userId);
 
@@ -42,7 +42,7 @@ public interface CpapmanagementRestService extends RestService {
    *
    */
   @GET
-  @Path("/user/")
+  @Path("/")
   List<UserEto> getAllUser();
 
 }
