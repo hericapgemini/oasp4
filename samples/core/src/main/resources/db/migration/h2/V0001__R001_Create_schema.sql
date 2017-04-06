@@ -6,6 +6,16 @@
 
 CREATE SEQUENCE HIBERNATE_SEQUENCE START WITH 1000000;
 
+CREATE TABLE Utilisateur(
+  id BIGINT NOT NULL AUTO_INCREMENT,
+  modificationCounter INTEGER NOT NULL,
+  nom VARCHAR(255),
+  prenom VARCHAR(255),
+  email VARCHAR(255),
+  motdepasse VARCHAR(255)
+);
+
+
 -- *** Staffmemeber ***
 CREATE TABLE StaffMember(
   id BIGINT NOT NULL AUTO_INCREMENT,
