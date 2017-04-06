@@ -1,5 +1,7 @@
 package io.oasp.gastronomy.restaurant.cpapmanagement.service.impl;
 
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -36,6 +38,12 @@ public class CpapmanagementRestServiceImpl implements CpapmanagementRestService 
   public void setCpapmanagement(Cpapmanagement cpapmanagement) {
 
     this.cpapmanagement = cpapmanagement;
+  }
+
+  @Override
+  public List<UserEto> getAllUser() {
+
+    return this.cpapmanagement.findAllUser();
   }
 
 }

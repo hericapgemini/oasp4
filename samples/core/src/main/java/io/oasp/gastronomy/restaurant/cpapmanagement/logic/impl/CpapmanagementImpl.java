@@ -1,5 +1,7 @@
 package io.oasp.gastronomy.restaurant.cpapmanagement.logic.impl;
 
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.transaction.Transactional;
@@ -69,6 +71,13 @@ public class CpapmanagementImpl extends AbstractComponentFacade implements Cpapm
   public void setUcSaveUser(UcSaveUser ucSaveUser) {
 
     this.ucSaveUser = ucSaveUser;
+  }
+
+  @Override
+  public List<UserEto> findAllUser() {
+
+    // TODO Auto-generated method stub
+    return this.ucFindUser.findAllUser();
   }
 
 }

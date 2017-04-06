@@ -1,5 +1,7 @@
 package io.oasp.gastronomy.restaurant.cpapmanagement.service.api;
 
+import java.util.List;
+
 import javax.inject.Named;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -13,6 +15,7 @@ import io.oasp.gastronomy.restaurant.cpapmanagement.logic.api.Cpapmanagement;
 import io.oasp.gastronomy.restaurant.cpapmanagement.logic.api.to.UserEto;
 import io.oasp.gastronomy.restaurant.cpapmanagement.logic.api.usecase.UcFindUser;
 import io.oasp.gastronomy.restaurant.general.common.api.RestService;
+import io.oasp.gastronomy.restaurant.staffmanagement.logic.api.to.StaffMemberEto;
 
 /**
  *
@@ -44,5 +47,13 @@ public interface CpapmanagementRestService extends RestService {
   @Path("/user/")
   @POST
   void saveUser(UserEto user);
+
+  /**
+   * @return a list of all {@link StaffMemberEto}
+   *
+   */
+  @GET
+  @Path("/user/")
+  List<UserEto> getAllUser();
 
 }

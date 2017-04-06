@@ -1,5 +1,7 @@
 package io.oasp.gastronomy.restaurant.cpapmanagement.logic.api.usecase;
 
+import java.util.List;
+
 import io.oasp.gastronomy.restaurant.cpapmanagement.logic.api.to.UserEto;
 
 /**
@@ -16,5 +18,11 @@ public interface UcFindUser {
    * @return the {@link UserEto user} for the given id.
    */
   UserEto findUser(long id);
+
+  /**
+   * @return {@link List} of all existing {@link UserEto users}.
+   */
+
+  List<UserEto> findAllUser();
 
 }
