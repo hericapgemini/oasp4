@@ -23,12 +23,6 @@ public class CpapmanagementRestServiceImpl implements CpapmanagementRestService 
 
   }
 
-  @Override
-  public void saveUser(UserEto user) {
-
-    this.cpapmanagement.saveUser(user);
-  }
-
   /**
    * This method sets the field <tt>cpapmanagement</tt>.
    *
