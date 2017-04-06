@@ -53,3 +53,5 @@ INSERT INTO StaffMember (id, modificationCounter, role, login, firstname, lastna
 INSERT INTO StaffMember (id, modificationCounter, role, login, firstname, lastname) VALUES (3, 0, 2, 'barkeeper', 'Bianca', 'Barkeeper');
 
 INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse) VALUES (0, 0, 'jean', 'paul', 'jean.paul', 'mdp');
+INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse) VALUES (1, 0, 'Pierre', 'Pogba', 'p.pogba@gmail.com', 'mdp2');
+INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse) VALUES (2, 0, 'Julien', 'Dupond', 'jean.pierre@gmail.com', 'mdp3');
