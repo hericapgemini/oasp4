@@ -26,7 +26,6 @@ import io.oasp.gastronomy.restaurant.staffmanagement.logic.api.to.StaffMemberEto
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public interface CpapmanagementRestService extends RestService {
-
   /**
    * Delegates to {@link UcFindUser#findUser}.
    *
