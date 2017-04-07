@@ -10,12 +10,12 @@ public interface Event extends ApplicationEntity {
   /**
    * @return session
    */
-  public String getSession();
+  public int getSession();
 
   /**
    * @param session new value of {@link #getsession}.
    */
-  public void setSession(String session);
+  public void setSession(int session);
 
   /**
    * @return data

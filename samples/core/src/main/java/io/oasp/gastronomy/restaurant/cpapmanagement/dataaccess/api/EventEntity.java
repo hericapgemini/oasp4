@@ -17,7 +17,7 @@ import io.oasp.gastronomy.restaurant.general.dataaccess.api.ApplicationPersisten
 public class EventEntity extends ApplicationPersistenceEntity implements Event {
   private static final long serialVersionUID = 1L;
 
-  private String session;
+  private int session;
 
   private Double data;
 
@@ -36,7 +36,7 @@ public class EventEntity extends ApplicationPersistenceEntity implements Event {
   /**
    * @return session
    */
-  public String getSession() {
+  public int getSession() {
 
     return this.session;
   }
@@ -44,7 +44,7 @@ public class EventEntity extends ApplicationPersistenceEntity implements Event {
   /**
    * @param session new value of {@link #getsession}.
    */
-  public void setSession(String session) {
+  public void setSession(int session) {
 
     this.session = session;
   }

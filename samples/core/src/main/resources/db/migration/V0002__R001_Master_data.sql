@@ -56,6 +56,6 @@ INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse
 INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse) VALUES (1, 0, 'Pierre', 'Pogba', 'p.pogba@gmail.com', 'mdp2');
 INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse) VALUES (2, 0, 'Julien', 'Dupond', 'jean.pierre@gmail.com', 'mdp3');
 
-INSERT INTO Event (id, modificationCounter, IdUser, session, data, datte, event) VALUES (0,0,1,'SESSION0', 0.01, 'DATE0', 'EVENT0');
-INSERT INTO Event (id, modificationCounter, IdUser, session, data, datte, event) VALUES (1,0,0,'SESSION1', 1.1, 'DATE1', 'EVENT1');
-INSERT INTO Event (id, modificationCounter, IdUser, session, data, datte, event) VALUES (2,0,2,'SESSION2', 2.2, 'DATE2', 'EVENT2');
+INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, datte, eventname) VALUES (0,0,1,0, 0.01, 'DATE0', 'EVENT0');
+INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, datte, eventname) VALUES (1,0,0,1, 1.1, 'DATE1', 'EVENT1');
+INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, datte, eventname) VALUES (2,0,2,2, 2.2, 'DATE2', 'EVENT2');
