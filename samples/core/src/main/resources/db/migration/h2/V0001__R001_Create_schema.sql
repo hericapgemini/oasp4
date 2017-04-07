@@ -15,6 +15,23 @@ CREATE TABLE Utilisateur(
   motdepasse VARCHAR(255)
 );
 
+-- *** Event ***
+CREATE TABLE Evenement(
+  id BIGINT NOT NULL AUTO_INCREMENT,
+  modificationCounter INTEGER NOT NULL,
+  IdUser BIGINT,
+  session VARCHAR(20),
+  data DECIMAL,
+  datte VARCHAR(20),
+  eventname VARCHAR(255),
+  CONSTRAINT PK_id PRIMARY KEY(id),
+  CONSTRAINT FK_IdUser  FOREIGN KEY(IdUser) REFERENCES Utilisateur(id),
+  CONSTRAINT U_id&datte UNIQUE (id,datte)
+  );
+  
+  
+
+
 
 -- *** Staffmemeber ***
 CREATE TABLE StaffMember(
@@ -145,3 +162,4 @@ CREATE TABLE RevInfo(
   user VARCHAR(255)
 );
 
+  
