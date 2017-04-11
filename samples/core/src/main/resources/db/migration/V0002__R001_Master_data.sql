@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INSERT INTO RestaurantTable (id, modificationCounter, number, state) VALUES (101, 1, 1, 2);
 INSERT INTO RestaurantTable (id, modificationCounter, number, state) VALUES (102, 1, 2, 0);
 INSERT INTO RestaurantTable (id, modificationCounter, number, state) VALUES (103, 1, 3, 0);
@@ -57,10 +58,10 @@ INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse
 INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse) VALUES (2, 0, 'Julien', 'Dupond', 'jean.pierre@gmail.com', 'mdp3');
 INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse) VALUES (3, 0, 'jean', 'paul', 'jean.paul', 'mdp');
 
-
+INSERT INTO Docteur (id, modificationCounter, nom, prenom, rpps, adeli) VALUES (0, 0, 'Karim', 'karim', 'RPPS1', 'ADELI1');
+INSERT INTO Docteur (id, modificationCounter, nom, prenom, rpps, adeli) VALUES (1, 0, 'Malik', 'malik', 'RPPS2', 'ADELI2');
+INSERT INTO Docteur (id, modificationCounter, nom, prenom, rpps, adeli) VALUES (2, 0, 'Sofiane', 'sofiane', 'RPPS3', 'ADELI3');
 
 INSERT INTO Event (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (1,0,3,1, 1.1, 'DATE1', 'EVENT1');
 INSERT INTO Event (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (2,0,2,2, 2.2, 'DATE2', 'EVENT2');
 INSERT INTO Event (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (3,0,1,3, 0.01, 'DATE3', 'EVENT3');
-
-
