@@ -51,15 +51,3 @@ INSERT INTO StaffMember (id, modificationCounter, role, login, firstname, lastna
 INSERT INTO StaffMember (id, modificationCounter, role, login, firstname, lastname) VALUES (1, 0, 0, 'cook', 'Carl', 'Cook');
 INSERT INTO StaffMember (id, modificationCounter, role, login, firstname, lastname) VALUES (2, 0, 1, 'waiter', 'Willy', 'Waiter');
 INSERT INTO StaffMember (id, modificationCounter, role, login, firstname, lastname) VALUES (3, 0, 2, 'barkeeper', 'Bianca', 'Barkeeper');
-
-INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse) VALUES (0, 0, 'jean', 'paul', 'jean.paul', 'mdp');
-INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse) VALUES (1, 0, 'Pierre', 'Pogba', 'p.pogba@gmail.com', 'mdp2');
-INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse) VALUES (2, 0, 'Julien', 'Dupond', 'jean.pierre@gmail.com', 'mdp3');
-
-INSERT INTO Docteur (id, modificationCounter, nom, prenom, rpps, adeli) VALUES (0, 0, 'Karim', 'karim', 'RPPS1', 'ADELI1');
-INSERT INTO Docteur (id, modificationCounter, nom, prenom, rpps, adeli) VALUES (1, 0, 'Malik', 'malik', 'RPPS2', 'ADELI2');
-INSERT INTO Docteur (id, modificationCounter, nom, prenom, rpps, adeli) VALUES (2, 0, 'Sofiane', 'sofiane', 'RPPS3', 'ADELI3');
-
-INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (0,0,1,0, 0.01, 'DATE0', 'EVENT0');
-INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (1,0,0,1, 1.1, 'DATE1', 'EVENT1');
-INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (2,0,2,2, 2.2, 'DATE2', 'EVENT2');

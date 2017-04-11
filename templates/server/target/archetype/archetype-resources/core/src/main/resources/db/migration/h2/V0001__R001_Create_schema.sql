@@ -6,39 +6,6 @@
 
 CREATE SEQUENCE HIBERNATE_SEQUENCE START WITH 1000000;
 
-CREATE TABLE Utilisateur(
-  id BIGINT NOT NULL AUTO_INCREMENT,
-  modificationCounter INTEGER NOT NULL,
-  nom VARCHAR(255),
-  prenom VARCHAR(255),
-  email VARCHAR(255),
-  motdepasse VARCHAR(255)
-);
-
--- *** Event ***
-CREATE TABLE Evenement(
-  id BIGINT NOT NULL AUTO_INCREMENT,
-  modificationCounter INTEGER NOT NULL,
-  IdUser BIGINT,
-  session INTEGER,
-  data DOUBLE,
-  dateEvent VARCHAR(20),
-  eventname VARCHAR(255),
-  CONSTRAINT PK_id PRIMARY KEY(id),
-  CONSTRAINT FK_IdUser  FOREIGN KEY(IdUser) REFERENCES Utilisateur(id),
-  CONSTRAINT U_id_datte UNIQUE (id,dateEvent)
-  );
-  
--- *** Doctor ***
-CREATE TABLE Docteur(
-  id BIGINT NOT NULL AUTO_INCREMENT,
-  modificationCounter INTEGER NOT NULL,
-  nom VARCHAR(255),
-  prenom VARCHAR(255),
-  rpps VARCHAR(255),
-  adeli VARCHAR(255)
-);
-
 -- *** Staffmemeber ***
 CREATE TABLE StaffMember(
   id BIGINT NOT NULL AUTO_INCREMENT,
@@ -90,7 +57,7 @@ CREATE TABLE Offer(
   CONSTRAINT UC_Offer_name UNIQUE(name),
   CONSTRAINT UC_Offer_number UNIQUE(number),
   CONSTRAINT FK_Offer_sideDishId FOREIGN KEY(sideDishId) REFERENCES Product(id) NOCHECK,
-  CONSTRAINT FK_Offer_mealId FOREIGN KEY(mealId) REFERENCES Product(id) NOCHECK,
+  CONSTRAINT FK_Offer_mealIdmeal FOREIGN KEY(mealId) REFERENCES Product(id) NOCHECK,
   CONSTRAINT FK_Offer_drinkId FOREIGN KEY(drinkId) REFERENCES Product(id) NOCHECK
 
 );
@@ -168,4 +135,3 @@ CREATE TABLE RevInfo(
   user VARCHAR(255)
 );
 
-  
