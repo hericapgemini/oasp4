@@ -21,12 +21,12 @@ CREATE TABLE Evenement(
   modificationCounter INTEGER NOT NULL,
   IdUser BIGINT,
   session INTEGER,
-  data DECIMAL,
-  datte VARCHAR(20),
+  data DOUBLE,
+  dateEvent VARCHAR(20),
   eventname VARCHAR(255),
   CONSTRAINT PK_id PRIMARY KEY(id),
   CONSTRAINT FK_IdUser  FOREIGN KEY(IdUser) REFERENCES Utilisateur(id),
-  CONSTRAINT U_id_datte UNIQUE (id,datte)
+  CONSTRAINT U_id_datte UNIQUE (id,dateEvent)
   );
   
   

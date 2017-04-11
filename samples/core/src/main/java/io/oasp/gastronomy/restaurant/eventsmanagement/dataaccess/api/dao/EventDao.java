@@ -1,6 +1,6 @@
-package io.oasp.gastronomy.restaurant.cpapmanagement.dataaccess.api.dao;
+package io.oasp.gastronomy.restaurant.eventsmanagement.dataaccess.api.dao;
 
-import io.oasp.gastronomy.restaurant.cpapmanagement.dataaccess.api.EventEntity;
+import io.oasp.gastronomy.restaurant.eventsmanagement.dataaccess.api.EventEntity;
 import io.oasp.gastronomy.restaurant.general.dataaccess.api.dao.ApplicationRevisionedDao;
 import io.oasp.module.jpa.dataaccess.api.MasterDataDao;
 

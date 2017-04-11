@@ -1,34 +1,27 @@
-package io.oasp.gastronomy.restaurant.cpapmanagement.dataaccess.api;
+package io.oasp.gastronomy.restaurant.eventsmanagement.logic.api.to;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-
-import io.oasp.gastronomy.restaurant.cpapmanagement.common.api.Event;
-import io.oasp.gastronomy.restaurant.general.dataaccess.api.ApplicationPersistenceEntity;
+import io.oasp.gastronomy.restaurant.eventsmanagement.common.api.Event;
+import io.oasp.module.basic.common.api.to.AbstractEto;
 
 /**
  * @author jalbenqu
  *
  */
-
-@Entity
-// Table is a reserved word in SQL/RDBMS and can not be used as table name
-@Table(name = "Evenement")
-public class EventEntity extends ApplicationPersistenceEntity implements Event {
+public class EventEto extends AbstractEto implements Event {
   private static final long serialVersionUID = 1L;
 
   private int session;
 
   private Double data;
 
-  private String date;
+  private String dateEvent;
 
   private String eventname;
 
   /**
    * The constructor.
    */
-  public EventEntity() {
+  public EventEto() {
 
     super();
   }
@@ -66,19 +59,19 @@ public class EventEntity extends ApplicationPersistenceEntity implements Event {
   }
 
   /**
-   * @return date
+   * @return dateEvent
    */
-  public String getDate() {
+  public String getDateEvent() {
 
-    return this.date;
+    return this.dateEvent;
   }
 
   /**
-   * @param date new value of {@link #getedate}.
+   * @param date new value of {@link #getdateEvent}.
    */
-  public void setDate(String date) {
+  public void setDateEvent(String dateEvent) {
 
-    this.date = date;
+    this.dateEvent = dateEvent;
   }
 
   /**

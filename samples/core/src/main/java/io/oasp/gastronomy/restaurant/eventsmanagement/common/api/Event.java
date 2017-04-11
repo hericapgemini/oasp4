@@ -1,4 +1,4 @@
-package io.oasp.gastronomy.restaurant.cpapmanagement.common.api;
+package io.oasp.gastronomy.restaurant.eventsmanagement.common.api;
 
 import io.oasp.gastronomy.restaurant.general.common.api.ApplicationEntity;
 
@@ -30,12 +30,12 @@ public interface Event extends ApplicationEntity {
   /**
    * @return date
    */
-  public String getDate();
+  public String getDateEvent();
 
   /**
-   * @param date new value of {@link #getedate}.
+   * @param date new value of {@link #getedateEvent}.
    */
-  public void setDate(String date);
+  public void setDateEvent(String dateEvent);
 
   /**
    * @return eventname
