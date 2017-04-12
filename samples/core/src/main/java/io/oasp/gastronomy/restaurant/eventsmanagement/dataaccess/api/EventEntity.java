@@ -13,7 +13,7 @@ import io.oasp.gastronomy.restaurant.general.dataaccess.api.ApplicationPersisten
 
 @Entity
 // Table is a reserved word in SQL/RDBMS and can not be used as table name
-@Table(name = "Evenement")
+@Table(name = "event")
 public class EventEntity extends ApplicationPersistenceEntity implements Event {
   private static final long serialVersionUID = 1L;
 

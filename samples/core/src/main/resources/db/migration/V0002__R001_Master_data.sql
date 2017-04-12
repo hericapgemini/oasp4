@@ -46,6 +46,8 @@ INSERT INTO Bill (id, modificationCounter, payed, total,tip) VALUES (2, 1, true,
 INSERT INTO BillOrderPosition (billId, orderPositionsId) VALUES (2,3);
 INSERT INTO BillOrderPosition (billId, orderPositionsId) VALUES (2,4);
 
+
+
 INSERT INTO StaffMember (id, modificationCounter, role, login, firstname, lastname) VALUES (1, 0, 0, 'cook', 'Carl', 'Cook');
 INSERT INTO StaffMember (id, modificationCounter, role, login, firstname, lastname) VALUES (2, 0, 1, 'waiter', 'Willy', 'Waiter');
 INSERT INTO StaffMember (id, modificationCounter, role, login, firstname, lastname) VALUES (3, 0, 2, 'barkeeper', 'Bianca', 'Barkeeper');
@@ -57,6 +59,10 @@ INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse
 
 INSERT INTO Patient (id, modificationCounter, nom, prenom, dateDeNaissance, sexe, poids, email, taille, adeli, idMachine) VALUES (0, 0, 'Lahm', 'Philipp', '1983-11-11', 'Homme', 66.00, 'lahm.philipp@gmail.com', 1.77, 'ADELI0', 012345);
 
-INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (1,0,3,1, 1.1, 'DATE1', 'EVENT1');
-INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (2,0,2,2, 2.2, 'DATE2', 'EVENT2');
-INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (3,0,1,3, 0.01, 'DATE3', 'EVENT3');
+INSERT INTO Docteur (id, modificationCounter, nom, prenom, rpps, adeli) VALUES (0, 0, 'Karim', 'karim', 'RPPS1', 'ADELI1');
+INSERT INTO Docteur (id, modificationCounter, nom, prenom, rpps, adeli) VALUES (1, 0, 'Malik', 'malik', 'RPPS2', 'ADELI2');
+INSERT INTO Docteur (id, modificationCounter, nom, prenom, rpps, adeli) VALUES (2, 0, 'Sofiane', 'sofiane', 'RPPS3', 'ADELI3');
+
+INSERT INTO Event (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (1,0,3,1, 1.1, 'DATE1', 'EVENT1');
+INSERT INTO Event (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (2,0,2,2, 2.2, 'DATE2', 'EVENT2');
+INSERT INTO Event (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (3,0,1,3, 0.01, 'DATE3', 'EVENT3');
