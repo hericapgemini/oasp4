@@ -59,3 +59,13 @@ INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse
 INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (0,0,1,0, 0.01, 'DATE0', 'EVENT0');
 INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (1,0,0,1, 1.1, 'DATE1', 'EVENT1');
 INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (2,0,2,2, 2.2, 'DATE2', 'EVENT2');
+
+ 
+
+INSERT INTO Medecin (id, modificationCounter, rpps, adeli, nom, prenom) VALUES (1,0,'111','222','jean','luc');
+INSERT INTO Medecin (id, modificationCounter, rpps, adeli, nom, prenom) VALUES (2,0,'112','223','nguyen','david');
+INSERT INTO Medecin (id, modificationCounter, rpps, adeli, nom, prenom) VALUES (3,0,'113','224','jacque','blanc');
+
+
+
+

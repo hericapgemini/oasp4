@@ -11,6 +11,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import io.oasp.gastronomy.restaurant.cpapmanagement.logic.api.Cpapmanagement;
+import io.oasp.gastronomy.restaurant.cpapmanagement.logic.api.to.MedecinEto;
 import io.oasp.gastronomy.restaurant.cpapmanagement.logic.api.to.UserEto;
 import io.oasp.gastronomy.restaurant.general.common.api.RestService;
 import io.oasp.gastronomy.restaurant.staffmanagement.logic.api.to.StaffMemberEto;
@@ -21,10 +22,11 @@ import io.oasp.gastronomy.restaurant.staffmanagement.logic.api.to.StaffMemberEto
  *
  */
 
-@Path("/cpapmanagement/v1/user")
+@Path("/cpapmanagement/v1/")
 @Named("CpapmanagementRestService")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
+
 public interface CpapmanagementRestService extends RestService {
   /**
    * Delegates to {@link UcFindUser#findUser}.
@@ -32,7 +34,7 @@ public interface CpapmanagementRestService extends RestService {
    * @param userId specified for the user
    * @return the user
    */
-  @Path("{userId}/")
+  @Path("user/{userId}/")
   @GET
   UserEto findUser(@PathParam("userId") long userId);
 
@@ -41,7 +43,25 @@ public interface CpapmanagementRestService extends RestService {
    *
    */
   @GET
-  @Path("/")
+  @Path("user/")
   List<UserEto> getAllUser();
+
+  /**
+   *
+   * @param MedecinId specified for the medecin
+   * @return the medecin
+   */
+
+  @Path("medecin/{medecinId}/")
+  @GET
+  MedecinEto findMedecin(@PathParam("medecinId") long medecinId);
+
+  /**
+   * @return a list of all {@link MedecinEto}
+   *
+   */
+  @GET
+  @Path("medecin/")
+  List<MedecinEto> getAllMedecin();
 
 }

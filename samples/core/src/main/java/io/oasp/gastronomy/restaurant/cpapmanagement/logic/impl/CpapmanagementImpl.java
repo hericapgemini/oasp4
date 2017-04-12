@@ -12,9 +12,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import io.oasp.gastronomy.restaurant.cpapmanagement.dataaccess.api.MedecinEntity;
 import io.oasp.gastronomy.restaurant.cpapmanagement.dataaccess.api.UserEntity;
+import io.oasp.gastronomy.restaurant.cpapmanagement.dataaccess.api.dao.MedecinDao;
 import io.oasp.gastronomy.restaurant.cpapmanagement.dataaccess.api.dao.UserDao;
 import io.oasp.gastronomy.restaurant.cpapmanagement.logic.api.Cpapmanagement;
+import io.oasp.gastronomy.restaurant.cpapmanagement.logic.api.to.MedecinEto;
 import io.oasp.gastronomy.restaurant.cpapmanagement.logic.api.to.UserEto;
 import io.oasp.gastronomy.restaurant.general.common.api.constants.PermissionConstants;
 import io.oasp.gastronomy.restaurant.general.logic.base.AbstractComponentFacade;
@@ -31,6 +34,8 @@ public class CpapmanagementImpl extends AbstractComponentFacade implements Cpapm
   private static final Logger LOG = LoggerFactory.getLogger(CpapmanagementImpl.class);
 
   private UserDao userDao;
+
+  private MedecinDao medecinDao;
 
   @Override
   @RolesAllowed(PermissionConstants.FIND_TABLE)
@@ -75,14 +80,59 @@ public class CpapmanagementImpl extends AbstractComponentFacade implements Cpapm
   public void setUserDao(UserDao userDao) {
 
     this.userDao = userDao;
+
   }
 
   /**
    * The constructor.
    */
+
   public CpapmanagementImpl() {
 
     super();
+  }
+
+  @Override
+  @RolesAllowed(PermissionConstants.FIND_TABLE)
+  public MedecinEto findMedecin(long id) {
+
+    LOG.debug("Get Medecin with id '" + id + "' from database.");
+
+    return getBeanMapper().map(getMedecinDao().findOne(id), MedecinEto.class);
+
+  }
+
+  @Override
+  @RolesAllowed(PermissionConstants.FIND_TABLE)
+  public List<MedecinEto> findAllMedecin() {
+
+    List<MedecinEntity> medecins = getMedecinDao().findAll();
+    List<MedecinEto> medecinBo = new ArrayList<>();
+    for (MedecinEntity medecin : medecins) {
+      medecinBo.add(getBeanMapper().map(medecin, MedecinEto.class));
+    }
+    return medecinBo;
+  }
+
+  /**
+   * @return the {@link MedecinDao} instance.
+   */
+
+  public MedecinDao getMedecinDao() {
+
+    return this.medecinDao;
+  }
+
+  /**
+   * Sets the field 'MedecinDao'.
+   *
+   * @param MedecinDao New value for MedecinDao
+   */
+
+  @Inject
+  public void setMedecinDao(MedecinDao medecinDao) {
+
+    this.medecinDao = medecinDao;
   }
 
 }
