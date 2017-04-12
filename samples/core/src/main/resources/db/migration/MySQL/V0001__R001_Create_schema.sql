@@ -40,7 +40,8 @@ CREATE TABLE Docteur(
   nom VARCHAR(255),
   prenom VARCHAR(255),
   rpps VARCHAR(255),
-  adeli VARCHAR(255)
+  adeli VARCHAR(255),
+  CONSTRAINT PK_id PRIMARY KEY(id)
 );
 
 -- *** Staffmemeber ***
