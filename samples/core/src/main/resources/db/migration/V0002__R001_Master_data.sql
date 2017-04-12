@@ -46,16 +46,17 @@ INSERT INTO Bill (id, modificationCounter, payed, total,tip) VALUES (2, 1, true,
 INSERT INTO BillOrderPosition (billId, orderPositionsId) VALUES (2,3);
 INSERT INTO BillOrderPosition (billId, orderPositionsId) VALUES (2,4);
 
-
-INSERT INTO StaffMember (id, modificationCounter, role, login, firstname, lastname) VALUES (0, 0, 3, 'chief', 'Charly', 'Chief');
 INSERT INTO StaffMember (id, modificationCounter, role, login, firstname, lastname) VALUES (1, 0, 0, 'cook', 'Carl', 'Cook');
 INSERT INTO StaffMember (id, modificationCounter, role, login, firstname, lastname) VALUES (2, 0, 1, 'waiter', 'Willy', 'Waiter');
 INSERT INTO StaffMember (id, modificationCounter, role, login, firstname, lastname) VALUES (3, 0, 2, 'barkeeper', 'Bianca', 'Barkeeper');
+INSERT INTO StaffMember (id, modificationCounter, role, login, firstname, lastname) VALUES (4, 0, 3, 'chief', 'Charly', 'Chief');
 
-INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse) VALUES (0, 0, 'jean', 'paul', 'jean.paul', 'mdp');
 INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse) VALUES (1, 0, 'Pierre', 'Pogba', 'p.pogba@gmail.com', 'mdp2');
 INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse) VALUES (2, 0, 'Julien', 'Dupond', 'jean.pierre@gmail.com', 'mdp3');
+INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse) VALUES (3, 0, 'jean', 'paul', 'jean.paul', 'mdp');
 
-INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (0,0,1,0, 0.01, 'DATE0', 'EVENT0');
-INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (1,0,0,1, 1.1, 'DATE1', 'EVENT1');
+INSERT INTO Patient (id, modificationCounter, nom, prenom, dateDeNaissance, sexe, poids, email, taille, adeli, idMachine) VALUES (0, 0, 'Lahm', 'Philipp', '1983-11-11', 'Homme', 66.00, 'lahm.philipp@gmail.com', 1.77, 'ADELI0', 012345);
+
+INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (1,0,3,1, 1.1, 'DATE1', 'EVENT1');
 INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (2,0,2,2, 2.2, 'DATE2', 'EVENT2');
+INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (3,0,1,3, 0.01, 'DATE3', 'EVENT3');

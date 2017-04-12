@@ -29,10 +29,21 @@ CREATE TABLE Evenement(
   CONSTRAINT U_id_datte UNIQUE (id,dateEvent)
   );
   
+ -- *** Patient ***
+CREATE TABLE Patient(
+  id BIGINT NOT NULL AUTO_INCREMENT,
+  modificationCounter INTEGER NOT NULL,
+  nom VARCHAR(255),
+  prenom VARCHAR(255),
+  dateDeNaissance DATE,
+  sexe VARCHAR(20),
+  poids DOUBLE,
+  email VARCHAR(255),
+  taille DOUBLE,
+  adeli VARCHAR(255),
+  idMachine INTEGER
+ );
   
-
-
-
 -- *** Staffmemeber ***
 CREATE TABLE StaffMember(
   id BIGINT NOT NULL AUTO_INCREMENT,
