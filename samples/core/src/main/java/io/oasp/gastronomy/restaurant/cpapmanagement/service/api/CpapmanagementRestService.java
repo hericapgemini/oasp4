@@ -57,7 +57,7 @@ public interface CpapmanagementRestService extends RestService {
   MedecinEto findMedecin(@PathParam("medecinId") long medecinId);
 
   /**
-   * @return a list of all {@link MedecinEto} test
+   * @return a list of all {@link MedecinEto} test1
    */
   @GET
   @Path("medecin/")
