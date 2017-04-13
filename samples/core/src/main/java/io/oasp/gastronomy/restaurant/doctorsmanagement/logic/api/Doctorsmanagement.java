@@ -20,6 +20,21 @@ public interface Doctorsmanagement {
   /**
    * @return {@link List} of all existing {@link DoctorEto doctors}.
    */
-
   List<DoctorEto> findAllDoctor();
+
+  /**
+   * Creates or updates a {@link DoctorEto}.
+   *
+   * @param staffMember The {@link DoctorEto} to create or update.
+   * @return the saved {@link DoctorEto}
+   */
+  DoctorEto saveDoctor(DoctorEto doctor);
+
+  /**
+   * Delete a Doctor
+   *
+   * doctorId the {@link DoctorEto#getId() ID} of a {@link DoctorEto} to delete.
+   */
+  void deleteDoctor(long doctorId);
+
 }

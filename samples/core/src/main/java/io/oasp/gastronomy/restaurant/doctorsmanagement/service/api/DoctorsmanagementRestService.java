@@ -4,12 +4,15 @@ import java.util.List;
 
 import javax.inject.Named;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import io.oasp.gastronomy.restaurant.doctorsmanagement.logic.api.Doctorsmanagement;
 import io.oasp.gastronomy.restaurant.doctorsmanagement.logic.api.to.DoctorEto;
 import io.oasp.gastronomy.restaurant.general.common.api.RestService;
 
@@ -40,5 +43,22 @@ public interface DoctorsmanagementRestService extends RestService {
   @GET
   @Path("/")
   List<DoctorEto> getAllDoctor();
+
+  /**
+   * Calls {@link Doctorsmanagement#saveDoctor}.
+   *
+   * @param DoctorEto the doctor to be created or updated
+   * @return the saved {@link DoctorEto}
+   */
+  @POST
+  @Path("/")
+  DoctorEto saveDoctor(DoctorEto doctorEto);
+
+  /**
+   * @param doctorId the login
+   */
+  @DELETE
+  @Path("/delete/{doctorId}")
+  void deleteDoctor(@PathParam("doctorId") long doctorId);
 
 }
