@@ -42,4 +42,5 @@ public class PatientmanagementRestServiceImpl implements PatientmanagementRestSe
 
     return this.patientsmanagement.findAllPatient();
   }
+
 }

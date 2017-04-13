@@ -30,7 +30,6 @@ public interface PatientmanagementRestService extends RestService {
    * @param patientId specified for the patient
    * @return the patient
    */
-
   @GET
   @Path("/{patientId}/")
   PatientEto findPatient(@PathParam("patientId") long patientId);
