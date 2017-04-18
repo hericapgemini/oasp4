@@ -53,6 +53,7 @@ public class PatientsmanagementImpl extends AbstractComponentFacade implements P
   }
 
   @Override
+  @RolesAllowed(PermissionConstants.DELETE_TABLE)
   public void deletePatient(long id) {
 
     LOG.debug("Get User with id '" + id + "' from database.");
