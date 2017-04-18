@@ -1,3 +1,5 @@
+
+
 INSERT INTO RestaurantTable (id, modificationCounter, number, state) VALUES (101, 1, 1, 2);
 INSERT INTO RestaurantTable (id, modificationCounter, number, state) VALUES (102, 1, 2, 0);
 INSERT INTO RestaurantTable (id, modificationCounter, number, state) VALUES (103, 1, 3, 0);
@@ -47,25 +49,21 @@ INSERT INTO BillOrderPosition (billId, orderPositionsId) VALUES (2,3);
 INSERT INTO BillOrderPosition (billId, orderPositionsId) VALUES (2,4);
 
 
-INSERT INTO StaffMember (id, modificationCounter, role, login, firstname, lastname) VALUES (0, 0, 3, 'chief', 'Charly', 'Chief');
+
 INSERT INTO StaffMember (id, modificationCounter, role, login, firstname, lastname) VALUES (1, 0, 0, 'cook', 'Carl', 'Cook');
 INSERT INTO StaffMember (id, modificationCounter, role, login, firstname, lastname) VALUES (2, 0, 1, 'waiter', 'Willy', 'Waiter');
 INSERT INTO StaffMember (id, modificationCounter, role, login, firstname, lastname) VALUES (3, 0, 2, 'barkeeper', 'Bianca', 'Barkeeper');
+INSERT INTO StaffMember (id, modificationCounter, role, login, firstname, lastname) VALUES (4, 0, 3, 'chief', 'Charly', 'Chief');
 
-INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse) VALUES (0, 0, 'jean', 'paul', 'jean.paul', 'mdp');
 INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse) VALUES (1, 0, 'Pierre', 'Pogba', 'p.pogba@gmail.com', 'mdp2');
 INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse) VALUES (2, 0, 'Julien', 'Dupond', 'jean.pierre@gmail.com', 'mdp3');
+INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse) VALUES (3, 0, 'jean', 'paul', 'jean.paul', 'mdp');
 
-INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (0,0,1,0, 0.01, 'DATE0', 'EVENT0');
-INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (1,0,0,1, 1.1, 'DATE1', 'EVENT1');
+INSERT INTO Medecin (id, modificationCounter, nom, prenom, rpps, adeli) VALUES (1, 0, 'Karim', 'karim', 'RPPS1', 'ADELI1');
+INSERT INTO Medecin (id, modificationCounter, nom, prenom, rpps, adeli) VALUES (2, 0, 'Malik', 'malik', 'RPPS2', 'ADELI2');
+INSERT INTO Medecin (id, modificationCounter, nom, prenom, rpps, adeli) VALUES (3, 0, 'Sofiane', 'sofiane', 'RPPS3', 'ADELI3');
+
+INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (1,0,3,1, 1.1, 'DATE1', 'EVENT1');
 INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (2,0,2,2, 2.2, 'DATE2', 'EVENT2');
-
- 
-
-INSERT INTO Medecin (id, modificationCounter, rpps, adeli, nom, prenom) VALUES (1,0,'111','222','jean','luc');
-INSERT INTO Medecin (id, modificationCounter, rpps, adeli, nom, prenom) VALUES (2,0,'112','223','nguyen','david');
-INSERT INTO Medecin (id, modificationCounter, rpps, adeli, nom, prenom) VALUES (3,0,'113','224','jacque','blanc');
-
-
-
+INSERT INTO Evenement (id, modificationCounter, IdUser, session, data, dateEvent, eventname) VALUES (3,0,1,3, 0.01, 'DATE3', 'EVENT3');
 

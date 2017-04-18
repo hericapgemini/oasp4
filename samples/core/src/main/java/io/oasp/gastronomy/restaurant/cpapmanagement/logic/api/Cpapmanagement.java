@@ -2,6 +2,7 @@ package io.oasp.gastronomy.restaurant.cpapmanagement.logic.api;
 
 import java.util.List;
 
+import io.oasp.gastronomy.restaurant.cpapmanagement.dataaccess.api.MedecinEntity;
 import io.oasp.gastronomy.restaurant.cpapmanagement.logic.api.to.MedecinEto;
 import io.oasp.gastronomy.restaurant.cpapmanagement.logic.api.to.UserEto;
 
@@ -38,5 +39,27 @@ public interface Cpapmanagement {
    */
 
   List<MedecinEto> findAllMedecin();
+
+  /**
+   * POST Create or autre
+   *
+   * @return new doctor
+   */
+
+  MedecinEto addMedecin(MedecinEto doctorID);
+
+  /**
+   * delete
+   *
+   */
+
+  void deleteMedecin(long MedecinID);
+
+  /**
+   * update PUT update Doctors
+   *
+   */
+
+  MedecinEntity updateDoctor(MedecinEntity DoctorID);
 
 }

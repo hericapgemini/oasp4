@@ -37,6 +37,15 @@ public class CpapmanagementImpl extends AbstractComponentFacade implements Cpapm
 
   private MedecinDao medecinDao;
 
+  /**
+   * The constructor.
+   */
+
+  public CpapmanagementImpl() {
+
+    super();
+  }
+
   @Override
   @RolesAllowed(PermissionConstants.FIND_TABLE)
   public UserEto findUser(long id) {
@@ -83,15 +92,6 @@ public class CpapmanagementImpl extends AbstractComponentFacade implements Cpapm
 
   }
 
-  /**
-   * The constructor.
-   */
-
-  public CpapmanagementImpl() {
-
-    super();
-  }
-
   @Override
   @RolesAllowed(PermissionConstants.FIND_TABLE)
   public MedecinEto findMedecin(long id) {
@@ -133,6 +133,62 @@ public class CpapmanagementImpl extends AbstractComponentFacade implements Cpapm
   public void setMedecinDao(MedecinDao medecinDao) {
 
     this.medecinDao = medecinDao;
+  }
+
+  @Override
+  @RolesAllowed(PermissionConstants.FIND_TABLE)
+  public MedecinEto addMedecin(final MedecinEto doctorID) {
+
+    List<MedecinEntity> medecins = getMedecinDao().findAll();
+    List<MedecinEto> medecinBo = new ArrayList<>();
+    boolean medecinExists = false;
+    for (MedecinEntity medecin : medecins) {
+
+      if (medecin != null && doctorID != null && medecin.getId() == doctorID.getId()) {
+        medecinExists = true;
+        break;
+      }
+    }
+    if (!medecinExists) {
+      medecinBo.add(doctorID);
+      medecinBo.add(getBeanMapper().map(doctorID, MedecinEto.class));
+      return (MedecinEto) medecinBo;
+    }
+    return doctorID;
+  }
+
+  @Override
+  @RolesAllowed(PermissionConstants.FIND_TABLE)
+  public void deleteMedecin(long medecinID) {
+
+    LOG.debug("Get Medecin with id '" + medecinID + "' from database.");
+
+    getMedecinDao().delete(medecinID);
+
+  }
+
+  @Override
+  @RolesAllowed(PermissionConstants.FIND_TABLE)
+
+  public MedecinEntity updateDoctor(MedecinEntity doctorID) {
+
+    List<MedecinEntity> medecins = getMedecinDao().findAll();
+    List<MedecinEto> medecinBo = new ArrayList<>();
+
+    for (MedecinEntity medecin : medecins) {
+
+      if (medecin != null && doctorID != null && medecin.getId() == doctorID.getId()) {
+        medecin.setId(doctorID.getId());
+        medecin.setNom(doctorID.getNom());
+        medecin.setPrenom(doctorID.getPrenom());
+        return medecin;
+      } else {
+        break;
+      }
+
+    }
+    return doctorID;
+
   }
 
 }

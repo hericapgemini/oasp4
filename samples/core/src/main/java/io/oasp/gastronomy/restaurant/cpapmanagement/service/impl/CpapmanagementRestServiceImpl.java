@@ -5,6 +5,7 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import io.oasp.gastronomy.restaurant.cpapmanagement.dataaccess.api.MedecinEntity;
 import io.oasp.gastronomy.restaurant.cpapmanagement.logic.api.Cpapmanagement;
 import io.oasp.gastronomy.restaurant.cpapmanagement.logic.api.to.MedecinEto;
 import io.oasp.gastronomy.restaurant.cpapmanagement.logic.api.to.UserEto;
@@ -50,6 +51,26 @@ public class CpapmanagementRestServiceImpl implements CpapmanagementRestService 
   public List<MedecinEto> getAllMedecin() {
 
     return this.cpapmanagement.findAllMedecin();
+  }
+
+  @Override
+  public MedecinEto addMedecin(MedecinEto doctorID) {
+
+    return this.cpapmanagement.addMedecin(doctorID);
+  }
+
+  @Override
+  public void deleteMedecin(long medecinID) {
+
+    this.cpapmanagement.deleteMedecin(medecinID);
+
+  }
+
+  @Override
+  public MedecinEntity updateDoctor(MedecinEntity doctorID) {
+
+    return this.cpapmanagement.updateDoctor(doctorID);
+
   }
 
 }

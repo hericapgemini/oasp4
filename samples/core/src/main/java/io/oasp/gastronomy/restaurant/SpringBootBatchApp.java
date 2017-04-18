@@ -10,22 +10,26 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 
 import io.oasp.module.jpa.dataaccess.api.AdvancedRevisionEntity;
 
-@SpringBootApplication(exclude = {
-		EndpointAutoConfiguration.class,
-		SecurityAutoConfiguration.class,
-		SecurityFilterAutoConfiguration.class,
-		})
+@SpringBootApplication(exclude = { EndpointAutoConfiguration.class, SecurityAutoConfiguration.class,
+SecurityFilterAutoConfiguration.class, })
 @EntityScan(basePackages = { "io.oasp.gastronomy.restaurant" }, basePackageClasses = { AdvancedRevisionEntity.class })
 @EnableGlobalMethodSecurity(jsr250Enabled = false)
 public class SpringBootBatchApp {
+
+  private static final String SUCCESS_RESULT = "<result>success</result>";
+
+  private static final String PASS = "pass";
+
+  private static final String FAIL = "fail";
 
   /**
    * Entry point for spring-boot based app
    *
    * @param args - arguments
    */
-	  public static void main(String[] args) {
+  public static void main(String[] args) {
 
-		    SpringApplication.run(SpringBootApp.class, args);
-	  }
+    SpringApplication.run(SpringBootApp.class, args);
+
+  }
 }

@@ -91,4 +91,12 @@ public class MedecinEto extends AbstractEto implements Medecin {
 
     this.Adeli = adeli;
   }
+
+  /**
+   * @param medecin
+   */
+  public static void put(MedecinEto medecin) {
+
+    MedecinEto.put(medecin);
+  }
 }

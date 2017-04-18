@@ -31,6 +31,7 @@ public class MedecinEntity extends ApplicationPersistenceEntity implements Medec
   public MedecinEntity() {
 
     super();
+
   }
 
   /**
