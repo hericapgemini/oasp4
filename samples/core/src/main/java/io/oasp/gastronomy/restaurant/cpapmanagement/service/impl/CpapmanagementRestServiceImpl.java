@@ -67,9 +67,9 @@ public class CpapmanagementRestServiceImpl implements CpapmanagementRestService 
   }
 
   @Override
-  public MedecinEntity updateDoctor(MedecinEntity doctorID) {
+  public MedecinEntity updateMedecin(MedecinEntity medecinID) {
 
-    return this.cpapmanagement.updateDoctor(doctorID);
+    return this.cpapmanagement.updateMedecin(medecinID);
 
   }
 

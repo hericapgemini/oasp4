@@ -67,6 +67,10 @@
       <permission id="DeleteOrderPosition"/>
       <!-- tablemanagement -->
       <permission id="DeleteTable"/>
+      <!-- cpapmanagement -->
+      <permission id="DeleteMedecin"/>
+       <permission id="UpdateMedecin"/>
+      
     </permissions>
   </group>
   <!-- END ARCHETYPE SKIP -->

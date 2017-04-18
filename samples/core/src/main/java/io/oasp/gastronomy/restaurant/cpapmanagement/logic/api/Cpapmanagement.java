@@ -46,7 +46,7 @@ public interface Cpapmanagement {
    * @return new doctor
    */
 
-  MedecinEto addMedecin(MedecinEto doctorID);
+  MedecinEto addMedecin(MedecinEto medecinID);
 
   /**
    * delete
@@ -60,6 +60,6 @@ public interface Cpapmanagement {
    *
    */
 
-  MedecinEntity updateDoctor(MedecinEntity DoctorID);
+  MedecinEntity updateMedecin(MedecinEntity medecinID);
 
 }

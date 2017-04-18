@@ -72,15 +72,15 @@ public interface CpapmanagementRestService extends RestService {
    *
    */
   @POST
-  @Path("medecin/doctor/{doctorid}")
-  MedecinEto addMedecin(@PathParam("doctorID") MedecinEto doctorID);
+  @Path("medecin/{medecinID}")
+  MedecinEto addMedecin(@PathParam("medecinID") MedecinEto medecinID);
 
   @DELETE
-  @Path("medecin/delete/{medecinID}")
+  @Path("medecin/{medecinID}")
   void deleteMedecin(@PathParam("medecinID") long medecinID);
 
   @PUT
-  @Path("medecin/update/{medecinID}/")
-  MedecinEntity updateDoctor(@PathParam("doctorID") MedecinEntity doctorID);
+  @Path("medecin/{medecinID}/")
+  MedecinEntity updateMedecin(@PathParam("medecinID") MedecinEntity medecinID);
 
 }
