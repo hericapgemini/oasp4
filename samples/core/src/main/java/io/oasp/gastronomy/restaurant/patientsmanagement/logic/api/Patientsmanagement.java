@@ -23,4 +23,10 @@ public interface Patientsmanagement {
 
   List<PatientEto> findAllPatient();
 
+  /**
+   * @param patientId
+   * @return
+   */
+  void deletePatient(long patientId);
+
 }

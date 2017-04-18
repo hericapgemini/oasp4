@@ -43,4 +43,10 @@ public class PatientmanagementRestServiceImpl implements PatientmanagementRestSe
     return this.patientsmanagement.findAllPatient();
   }
 
+  @Override
+  public void deletePatient(long patientId) {
+
+    this.patientsmanagement.deletePatient(patientId);
+  }
+
 }

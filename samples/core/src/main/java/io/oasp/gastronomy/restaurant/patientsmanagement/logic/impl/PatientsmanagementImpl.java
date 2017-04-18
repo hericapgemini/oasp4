@@ -53,6 +53,14 @@ public class PatientsmanagementImpl extends AbstractComponentFacade implements P
   }
 
   @Override
+  public void deletePatient(long id) {
+
+    LOG.debug("Get User with id '" + id + "' from database.");
+
+    getPatientDao().delete(id);
+  }
+
+  @Override
   @RolesAllowed(PermissionConstants.FIND_TABLE)
   public List<PatientEto> findAllPatient() {
 

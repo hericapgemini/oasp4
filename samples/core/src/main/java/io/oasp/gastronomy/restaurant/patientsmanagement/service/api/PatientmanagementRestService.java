@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.inject.Named;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -41,5 +42,13 @@ public interface PatientmanagementRestService extends RestService {
   @GET
   @Path("/")
   List<PatientEto> getAllPatient();
+
+  /**
+   *
+   * @param patientId id of the {@link PatientEto}
+   */
+  @Path("/delete/{patientId}")
+  @DELETE
+  void deletePatient(@PathParam("patientId") long patientId);
 
 }
