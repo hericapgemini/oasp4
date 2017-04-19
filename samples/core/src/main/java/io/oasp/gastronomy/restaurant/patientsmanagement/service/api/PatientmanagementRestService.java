@@ -53,7 +53,8 @@ public interface PatientmanagementRestService extends RestService {
   void deletePatient(@PathParam("patientId") long patientId);
 
   /**
-   *
+   * @param patientEto to add / update
+   * @return PatientEto
    *
    */
   @POST

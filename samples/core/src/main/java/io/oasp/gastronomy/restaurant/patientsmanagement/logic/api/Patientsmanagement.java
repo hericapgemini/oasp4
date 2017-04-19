@@ -25,7 +25,7 @@ public interface Patientsmanagement {
 
   /**
    * @param patientId
-   * @return
+   *
    */
   void deletePatient(long patientId);
 

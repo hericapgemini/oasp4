@@ -8,7 +8,6 @@ import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.transaction.Transactional;
-import javax.validation.Valid;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -99,12 +98,7 @@ public class PatientsmanagementImpl extends AbstractComponentFacade implements P
   }
 
   @Override
-  public PatientEto addPatient(@Valid PatientEto patient) {
-
-    Long patientId = patient.getId();
-    if (patientId == null) {
-      throw new IllegalArgumentException("Cannot create empty statement in DB with id = " + patientId);
-    }
+  public PatientEto addPatient(PatientEto patient) {
 
     Objects.requireNonNull(patient, "patient");
 
