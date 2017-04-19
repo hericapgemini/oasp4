@@ -46,13 +46,15 @@ public interface DoctorsmanagementRestService extends RestService {
 
   /**
    * Calls {@link Doctorsmanagement#saveDoctor}.
+   * 
+   * @param doctorEto
    *
    * @param DoctorEto the doctor to be created or updated
    * @return the saved {@link DoctorEto}
    */
   @POST
   @Path("/")
-  DoctorEto saveDoctor(@PathParam("Doctor") DoctorEto doctorEto);
+  DoctorEto saveDoctor(DoctorEto doctorEto);
 
   /**
    * @param doctorId the login
