@@ -52,13 +52,13 @@ public interface DoctorsmanagementRestService extends RestService {
    */
   @POST
   @Path("/")
-  DoctorEto saveDoctor(DoctorEto doctorEto);
+  DoctorEto saveDoctor(@PathParam("Doctor") DoctorEto doctorEto);
 
   /**
    * @param doctorId the login
    */
   @DELETE
-  @Path("/delete/{doctorId}")
+  @Path("/{doctorId}")
   void deleteDoctor(@PathParam("doctorId") long doctorId);
 
 }

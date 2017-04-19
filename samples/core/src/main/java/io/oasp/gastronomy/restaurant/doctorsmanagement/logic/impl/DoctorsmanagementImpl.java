@@ -34,7 +34,7 @@ public class DoctorsmanagementImpl extends AbstractComponentFacade implements Do
   private DoctorDao doctorDao;
 
   @Override
-  @RolesAllowed(PermissionConstants.FIND_TABLE)
+  @RolesAllowed(PermissionConstants.FIND_DOCTOR)
   public DoctorEto findDoctor(long id) {
 
     LOG.debug("Get Doctor with id '" + id + "' from database.");
@@ -44,7 +44,7 @@ public class DoctorsmanagementImpl extends AbstractComponentFacade implements Do
   }
 
   @Override
-  @RolesAllowed(PermissionConstants.FIND_TABLE)
+  @RolesAllowed(PermissionConstants.FIND_DOCTOR)
   public List<DoctorEto> findAllDoctor() {
 
     List<DoctorEntity> doctors = getDoctorDao().findAll();
@@ -58,7 +58,7 @@ public class DoctorsmanagementImpl extends AbstractComponentFacade implements Do
   }
 
   @Override
-  @RolesAllowed(PermissionConstants.SAVE_TABLE)
+  @RolesAllowed(PermissionConstants.SAVE_DOCTOR)
   public DoctorEto saveDoctor(DoctorEto doctor) {
 
     Objects.requireNonNull(doctor, "doctor");
@@ -93,7 +93,7 @@ public class DoctorsmanagementImpl extends AbstractComponentFacade implements Do
   }
 
   @Override
-  @RolesAllowed(PermissionConstants.DELETE_TABLE)
+  @RolesAllowed(PermissionConstants.DELETE_DOCTOR)
   public void deleteDoctor(long doctorId) {
 
     getDoctorDao().delete(doctorId);
