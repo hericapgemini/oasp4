@@ -49,4 +49,10 @@ public class PatientmanagementRestServiceImpl implements PatientmanagementRestSe
     this.patientsmanagement.deletePatient(patientId);
   }
 
+  @Override
+  public PatientEto addPatient(PatientEto patientEto) {
+
+    return this.patientsmanagement.addPatient(patientEto);
+  }
+
 }

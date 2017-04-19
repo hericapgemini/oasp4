@@ -29,4 +29,6 @@ public interface Patientsmanagement {
    */
   void deletePatient(long patientId);
 
+  PatientEto addPatient(PatientEto patientEto);
+
 }

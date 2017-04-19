@@ -2,11 +2,13 @@ package io.oasp.gastronomy.restaurant.patientsmanagement.logic.impl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.transaction.Transactional;
+import javax.validation.Valid;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -53,7 +55,7 @@ public class PatientsmanagementImpl extends AbstractComponentFacade implements P
   }
 
   @Override
-  @RolesAllowed(PermissionConstants.DELETE_TABLE)
+  @RolesAllowed(PermissionConstants.DELETE_PATIENT)
   public void deletePatient(long id) {
 
     LOG.debug("Get User with id '" + id + "' from database.");
@@ -94,5 +96,25 @@ public class PatientsmanagementImpl extends AbstractComponentFacade implements P
   public void setPatientDao(PatientDao patientDao) {
 
     this.patientDao = patientDao;
+  }
+
+  @Override
+  public PatientEto addPatient(@Valid PatientEto patient) {
+
+    Long patientId = patient.getId();
+    if (patientId == null) {
+      throw new IllegalArgumentException("Cannot create empty statement in DB with id = " + patientId);
+    }
+
+    Objects.requireNonNull(patient, "patient");
+
+    PatientEntity patientEnt = getBeanMapper().map(patient, PatientEntity.class);
+
+    getPatientDao().save(patientEnt);
+
+    LOG.debug("Patient with id '{}' has been created.", patientEnt.getId());
+
+    return getBeanMapper().map(patientEnt, PatientEto.class);
+
   }
 }

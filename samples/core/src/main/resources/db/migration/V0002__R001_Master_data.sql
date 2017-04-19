@@ -60,6 +60,8 @@ INSERT INTO Utilisateur (id, modificationCounter, nom, prenom, email, motdepasse
 INSERT INTO Patient (id, modificationCounter, nom, prenom, dateDeNaissance, sexe, poids, email, taille, adeli, idMachine) VALUES (1, 0, 'Lahm', 'Philipp', '1983-11-11', 'Homme', 66.00, 'lahm.philipp@gmail.com', 1.77, 'ADELI0', 012345);
 INSERT INTO Patient (id, modificationCounter, nom, prenom, dateDeNaissance, sexe, poids, email, taille, adeli, idMachine) VALUES (2, 0, 'Owen', 'Michael', '1979-12-14', 'Homme', 70.00, 'owen.michael@gmail.com', 1.73, 'ADELI1', 112345);
 INSERT INTO Patient (id, modificationCounter, nom, prenom, dateDeNaissance, sexe, poids, email, taille, adeli, idMachine) VALUES (3, 0, 'Williams', 'Serena', '1981-11-11', 'Femme', 70.00, 'williams.serena@gmail.com', 1.75, 'ADELI2', 212345);
+INSERT INTO Patient (id, modificationCounter, nom, prenom, dateDeNaissance, sexe, poids, email, taille, adeli, idMachine) VALUES (4, 0, 'Raonic', 'Milos', '1990-12-27', 'Homme', 98.00, 'milos.raonic@gmail.com', 1.96, 'ADELI3', 312345);
+
 INSERT INTO Docteur (id, modificationCounter, nom, prenom, rpps, adeli) VALUES (1, 0, 'Karim', 'karim', 'RPPS1', 'ADELI1');
 INSERT INTO Docteur (id, modificationCounter, nom, prenom, rpps, adeli) VALUES (2, 0, 'Malik', 'malik', 'RPPS2', 'ADELI2');
 INSERT INTO Docteur (id, modificationCounter, nom, prenom, rpps, adeli) VALUES (3, 0, 'Sofiane', 'sofiane', 'RPPS3', 'ADELI3');
