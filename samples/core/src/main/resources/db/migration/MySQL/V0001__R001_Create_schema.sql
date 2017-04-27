@@ -32,16 +32,6 @@ CREATE TABLE Event(
   CONSTRAINT FK_IdUser  FOREIGN KEY(IdUser) REFERENCES Utilisateur(id),
   CONSTRAINT U_id_datte UNIQUE (id,dateEvent)
   );
-  
--- *** Doctor ***
-CREATE TABLE Docteur(
-  id BIGINT NOT NULL AUTO_INCREMENT,
-  modificationCounter INTEGER NOT NULL,
-  nom VARCHAR(255),
-  prenom VARCHAR(255),
-  rpps VARCHAR(255),
-  adeli VARCHAR(255)
-);
 
 -- *** Staffmemeber ***
 CREATE TABLE StaffMember(
@@ -170,4 +160,15 @@ CREATE TABLE RevInfo(
   id BIGINT NOT NULL ,
   timestamp BIGINT NOT NULL,
   user VARCHAR(255)
+);
+
+-- *** Doctor ***
+CREATE TABLE Docteur(
+  id BIGINT NOT NULL AUTO_INCREMENT,
+  modificationCounter INTEGER NOT NULL,
+  nom VARCHAR(255),
+  prenom VARCHAR(255),
+  rpps VARCHAR(255),
+  adeli VARCHAR(255),
+  PRIMARY KEY (ID)
 );
