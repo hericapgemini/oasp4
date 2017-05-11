@@ -2,6 +2,7 @@ package io.oasp.gastronomy.restaurant.doctorsmanagement.logic.impl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
@@ -33,7 +34,7 @@ public class DoctorsmanagementImpl extends AbstractComponentFacade implements Do
   private DoctorDao doctorDao;
 
   @Override
-  @RolesAllowed(PermissionConstants.FIND_TABLE)
+  @RolesAllowed(PermissionConstants.FIND_DOCTOR)
   public DoctorEto findDoctor(long id) {
 
     LOG.debug("Get Doctor with id '" + id + "' from database.");
@@ -43,7 +44,7 @@ public class DoctorsmanagementImpl extends AbstractComponentFacade implements Do
   }
 
   @Override
-  @RolesAllowed(PermissionConstants.FIND_TABLE)
+  @RolesAllowed(PermissionConstants.FIND_DOCTOR)
   public List<DoctorEto> findAllDoctor() {
 
     List<DoctorEntity> doctors = getDoctorDao().findAll();
@@ -56,13 +57,46 @@ public class DoctorsmanagementImpl extends AbstractComponentFacade implements Do
     return doctorsBo;
   }
 
+  @Override
+  @RolesAllowed(PermissionConstants.SAVE_DOCTOR)
+  public DoctorEto saveDoctor(DoctorEto doctor) {
+
+    Objects.requireNonNull(doctor, "doctor");
+
+    Long id = doctor.getId();
+    DoctorEntity targetDoctor = null;
+
+    if (id != null) {
+      targetDoctor = getDoctorDao().findOne(id);
+    }
+    if (targetDoctor == null) {
+      // StaffMember is new: -> create
+      LOG.debug("Saving Doctor with id '{}' to the database.", id);
+    } else {
+      // Doctor already exists: -> Update
+      LOG.debug("Updating Doctor with id '{}' in the database.", id);
+      if (!Objects.equals(targetDoctor.getNom(), doctor.getNom())) {
+        LOG.debug("Changing login of StaffMember with id '{}' from '{}' to '{}' in the database.", id,
+            targetDoctor.getNom(), doctor.getNom());
+      }
+    }
+    DoctorEntity persistedDoctor = getDoctorDao().save(getBeanMapper().map(doctor, DoctorEntity.class));
+    return getBeanMapper().map(persistedDoctor, DoctorEto.class);
+  }
+
   /**
    * @return the {@link DoctorDao} instance.
    */
-
   public DoctorDao getDoctorDao() {
 
     return this.doctorDao;
+  }
+
+  @Override
+  @RolesAllowed(PermissionConstants.DELETE_DOCTOR)
+  public void deleteDoctor(long doctorId) {
+
+    getDoctorDao().delete(doctorId);
   }
 
   /**

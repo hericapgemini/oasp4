@@ -1,4 +1,3 @@
-
 INSERT INTO RestaurantTable (id, modificationCounter, number, state) VALUES (101, 1, 1, 2);
 INSERT INTO RestaurantTable (id, modificationCounter, number, state) VALUES (102, 1, 2, 0);
 INSERT INTO RestaurantTable (id, modificationCounter, number, state) VALUES (103, 1, 3, 0);
@@ -46,8 +45,6 @@ INSERT INTO BillOrderPosition (billId, orderPositionsId) VALUES (1,2);
 INSERT INTO Bill (id, modificationCounter, payed, total,tip) VALUES (2, 1, true, 14.98, 1.4);
 INSERT INTO BillOrderPosition (billId, orderPositionsId) VALUES (2,3);
 INSERT INTO BillOrderPosition (billId, orderPositionsId) VALUES (2,4);
-
-
 
 INSERT INTO StaffMember (id, modificationCounter, role, login, firstname, lastname) VALUES (1, 0, 0, 'cook', 'Carl', 'Cook');
 INSERT INTO StaffMember (id, modificationCounter, role, login, firstname, lastname) VALUES (2, 0, 1, 'waiter', 'Willy', 'Waiter');

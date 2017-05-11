@@ -80,5 +80,14 @@ public abstract class PermissionConstants {
 
   /** {@link io.oasp.module.security.common.api.accesscontrol.AccessControlPermission} to remove table. */
   public static final String DELETE_TABLE = "DeleteTable";
+
+  /** {@link io.oasp.module.security.common.api.accesscontrol.AccessControlPermission} to retrieve doctor. */
+  public static final String FIND_DOCTOR = "FindDoctor";
+
+  /** {@link io.oasp.module.security.common.api.accesscontrol.AccessControlPermission} to save doctor. */
+  public static final String SAVE_DOCTOR = "SaveDoctor";
+
+  /** {@link io.oasp.module.security.common.api.accesscontrol.AccessControlPermission} to remove doctor. */
+  public static final String DELETE_DOCTOR = "DeleteDoctor";
   // END ARCHETYPE SKIP
 }

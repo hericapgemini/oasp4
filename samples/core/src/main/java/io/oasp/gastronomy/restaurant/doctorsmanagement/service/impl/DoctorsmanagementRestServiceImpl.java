@@ -41,4 +41,16 @@ public class DoctorsmanagementRestServiceImpl implements DoctorsmanagementRestSe
 
     return this.doctorsmanagement.findAllDoctor();
   }
+
+  @Override
+  public DoctorEto saveDoctor(DoctorEto doctorEto) {
+
+    return this.doctorsmanagement.saveDoctor(doctorEto);
+  }
+
+  @Override
+  public void deleteDoctor(long doctorId) {
+
+    this.doctorsmanagement.deleteDoctor(doctorId);
+  }
 }
